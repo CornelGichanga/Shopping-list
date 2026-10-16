@@ -129,8 +129,23 @@ function renderItems() {
       renderItems();
     });
 
+ // Delete button
+const deleteButton = document.createElement("button");
+deleteButton.type = "button";
+deleteButton.classList.add("delete-button");
+deleteButton.textContent = "Delete";
+
+deleteButton.addEventListener("click", function() {
+  shoppingItems = shoppingItems.filter(function(currentItem) {
+    return currentItem.id !== item.id;
+  });
+
+  saveItems();
+  renderItems();
+});
+
     // Add only the purchase and edit buttons.
-    actions.append(purchaseButton, editButton);
+    actions.append(purchaseButton, editButton, deleteButton);
 
     li.append(details, actions);
     shoppingList.appendChild(li);

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       , initial-scale=1.0">
     <title>Interactive Shopping List</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <main class="container">
@@ -25,9 +26,12 @@
     <div class="form-group">
       <label for="item-quantity">Quantity</label>
       <input
-        type="number"
+         type="number"
         id="item-quantity"
-        placeholder="1"
+        min="1"
+        step="1"
+        value="1"
+        required
 
       >
     </div>
@@ -50,6 +54,8 @@
 
                 <section class="summary">
                     <p>Total cost:<strong id="total-cost">ksh 0.00</strong></p>
+                    <p>Purchased: <strong id="purchased-cost">KSh 0.00</strong></p>
+                     <p>Items remaining: <strong id="remaining-count">0</strong></p>
                 </section>
 
                 <h2>Items</h2>

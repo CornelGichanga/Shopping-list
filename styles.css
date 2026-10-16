@@ -207,6 +207,20 @@ button:focus-visible {
   outline: 2px solid #256d4b;
   outline-offset: 2px;
 }
+.delete-button {
+  background: red !important;
+  background-color: red !important;
+  color: white !important;
+  border: 1px solid darkred;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: darkred !important;
+  background-color: darkred !important;
+}
 
 /* Responsive layout for tablets and small screens */
 @media (max-width: 600px) {
@@ -230,4 +244,6 @@ button:focus-visible {
   .item-actions {
     width: 100%;
   }
+
+
 }
